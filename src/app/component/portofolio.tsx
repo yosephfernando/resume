@@ -26,43 +26,43 @@ export default function Portofolio(){
                 >
                         <SwiperSlide>
                             <div className="p-4 flex flex-col items-center bg-slate-400 rounded-2xl">
-                                <Image alt="porto" src="/nodejs.png" width={180} height={180} />
+                                <Image alt="porto" src="/resume/nodejs.png" width={180} height={180} />
                                 <p className="mt-3">Test portp</p>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="p-4 flex flex-col items-center bg-slate-400 rounded-2xl">
-                                <Image alt="porto" src="/nodejs.png" width={180} height={180} />
+                                <Image alt="porto" src="/resume/nodejs.png" width={180} height={180} />
                                 <p className="mt-3">Test portp</p>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="p-4 flex flex-col items-center bg-slate-400 rounded-2xl">
-                                <Image alt="porto" src="/nodejs.png" width={180} height={180} />
+                                <Image alt="porto" src="/resume/nodejs.png" width={180} height={180} />
                                 <p className="mt-3">Test portp</p>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="p-4 flex flex-col items-center bg-slate-400 rounded-2xl">
-                                <Image alt="porto" src="/nodejs.png" width={180} height={180} />
+                                <Image alt="porto" src="/resume/nodejs.png" width={180} height={180} />
                                 <p className="mt-3">Test portp</p>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="p-4 flex flex-col items-center bg-slate-400 rounded-2xl">
-                                <Image alt="porto" src="/nodejs.png" width={180} height={180} />
+                                <Image alt="porto" src="/resume/nodejs.png" width={180} height={180} />
                                 <p className="mt-3">Test portp</p>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="p-4 flex flex-col items-center bg-slate-400 rounded-2xl">
-                                <Image alt="porto" src="/nodejs.png" width={180} height={180} />
+                                <Image alt="porto" src="/resume/nodejs.png" width={180} height={180} />
                                 <p className="mt-3">Test portp</p>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="p-4 flex flex-col items-center bg-slate-400 rounded-2xl">
-                                <Image alt="porto" src="/nodejs.png" width={180} height={180} />
+                                <Image alt="porto" src="/resume/nodejs.png" width={180} height={180} />
                                 <p className="mt-3">Test portp</p>
                             </div>
                         </SwiperSlide>

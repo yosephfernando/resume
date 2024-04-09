@@ -6,62 +6,62 @@ const skilsData = [
     {
         "name": "NodeJS",
         "tag": "backend",
-        "image": "/nodejs.png"
+        "image": "/resume/nodejs.png"
     },
     {
         "name": "Laravel",
         "tag": "backend",
-        "image": "/nodejs.png"
+        "image": "/resume/nodejs.png"
     },
     {
         "name": "ReactJS",
         "tag": "frontend",
-        "image": "/nodejs.png"
+        "image": "/resume/nodejs.png"
     },
     {
         "name": "VueJS",
         "tag": "frontend",
-        "image": "/nodejs.png"
+        "image": "/resume/nodejs.png"
     },
     {
         "name": "Mysql",
         "tag": "dbms",
-        "image": "/nodejs.png"
+        "image": "/resume/nodejs.png"
     },
     {
         "name": "PSQL",
         "tag": "dbms",
-        "image": "/nodejs.png"
+        "image": "/resume/nodejs.png"
     },
     {
         "name": "SQL server",
         "tag": "dbms",
-        "image": "/nodejs.png"
+        "image": "/resume/nodejs.png"
     },
     {
         "name": "Docker",
         "tag": "devops",
-        "image": "/nodejs.png"
+        "image": "/resume/nodejs.png"
     },
     {
         "name": "Haproxy",
         "tag": "devops",
-        "image": "/nodejs.png"
+        "image": "/resume/nodejs.png"
     },
     {
         "name": "Cloudflare",
         "tag": "devops",
-        "image": "/nodejs.png"
+        "image": "/resume/nodejs.png"
     },
     {
         "name": "Kotlin",
         "tag": "mobiledev",
-        "image": "/nodejs.png"
+        "image": "/resume/nodejs.png"
     },
     {
         "name": "Java",
         "tag": "mobiledev",
-        "image": "/nodejs.png"
+        "image": "/resume/nodejs.png"
     }
 ]
 
