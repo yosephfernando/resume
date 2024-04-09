@@ -11,57 +11,62 @@ const skilsData = [
     {
         "name": "Laravel",
         "tag": "backend",
-        "image": "/resume/nodejs.png"
+        "image": "/resume/laravel.svg"
+    },
+    {
+        "name": "Python",
+        "tag": "backend",
+        "image": "/resume/python.svg"
     },
     {
         "name": "ReactJS",
         "tag": "frontend",
-        "image": "/resume/nodejs.png"
+        "image": "/resume/file-type-reactjs.svg"
     },
     {
         "name": "VueJS",
         "tag": "frontend",
-        "image": "/resume/nodejs.png"
+        "image": "/resume/vue-js.svg"
     },
     {
         "name": "Mysql",
         "tag": "dbms",
-        "image": "/resume/nodejs.png"
+        "image": "/resume/mysql-original-wordmark.svg"
     },
     {
         "name": "PSQL",
         "tag": "dbms",
-        "image": "/resume/nodejs.png"
+        "image": "/resume/postgresql-plain-wordmark.svg"
     },
     {
         "name": "SQL server",
         "tag": "dbms",
-        "image": "/resume/nodejs.png"
+        "image": "/resume/sql-database-generic.svg"
     },
     {
         "name": "Docker",
         "tag": "devops",
-        "image": "/resume/nodejs.png"
+        "image": "/resume/docker-original-wordmark.svg"
     },
     {
         "name": "Haproxy",
         "tag": "devops",
-        "image": "/resume/nodejs.png"
+        "image": "/resume/haproxy_logo_icon_171017.png"
     },
     {
         "name": "Cloudflare",
         "tag": "devops",
-        "image": "/resume/nodejs.png"
+        "image": "/resume/cloudflare.svg"
     },
     {
         "name": "Kotlin",
         "tag": "mobiledev",
-        "image": "/resume/nodejs.png"
+        "image": "/resume/kotlin-original.svg"
     },
     {
         "name": "Java",
         "tag": "mobiledev",
-        "image": "/resume/nodejs.png"
+        "image": "/resume/java-original.svg"
     }
 ]
 
@@ -84,7 +89,7 @@ export default function Skils(){
     }
 
     return (
-        <div className="flex flex-col p-8 w-full items-center justify-between">
+        <div className="flex flex-col p-8 container items-center justify-between">
             <p className="font-tilt-neon text-[30px]">Skils</p>
             <div className="flex flex-wrap justify-center gap-4 mb-3 font-tilt-neon">
                 <div onClick={() => changeTag("all")} className={`px-5 rounded-lg border-2 border-solid border-green-400 ${(tag == "all" ? "text-white bg-green-400":"")} hover:text-white hover:bg-green-400 transition duration-300 ease-in-out transform cursor-pointer`}>

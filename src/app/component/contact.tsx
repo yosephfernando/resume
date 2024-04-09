@@ -6,7 +6,9 @@ export default function Contact(){
             <p className="font-tilt-neon text-[30px]">Contact</p>
             <div className="flex gap-2 items-center cursor-pointer">
                 <Image alt="email" width={30} height={30} src="/resume/gmail.png"/>
-                <p className="font-tilt-neon text-[20px]">fernandoyoseph6@gmail.com</p>
+                <a className="font-tilt-neon text-[20px]" href="mailto:fernandoyoseph6@gmail.com">
+                    fernandoyoseph6@gmail.com
+                </a>
             </div>
         </div>
     )

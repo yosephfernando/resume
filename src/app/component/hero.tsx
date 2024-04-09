@@ -7,8 +7,12 @@ export default function Hero(){
             <p className="font-tilt-neon text-[30px]">Herman Yoseph Fernando</p>
             <p className="font-tilt-neon my-7 text-[24px]">Full stack devloper</p>
             <div className="flex gap-3 justify-center">
-                <Image alt="github" src="/resume/github-sign.png" width={30} height={30} />
-                <Image alt="github" src="/resume/linkedin.png" width={30} height={30} />
+                <a href="https://github.com/yosephfernando" target="_blank">
+                    <Image alt="github" src="/resume/github-sign.png" width={30} height={30} />
+                </a>
+                <a href="https://www.linkedin.com/in/yoseph-fernando-b392b0b0" target="_blank">
+                    <Image alt="github" src="/resume/linkedin.png" width={30} height={30} />
+                </a>
             </div>
         </div>
     )
