@@ -91,7 +91,7 @@ export default function Skils(){
     return (
         <div className="flex flex-col p-8 container items-center justify-between">
             <p className="font-tilt-neon text-[30px]">Skils</p>
-            <div className="flex flex-wrap justify-center gap-4 mb-3 font-tilt-neon">
+            <div className="flex flex-wrap justify-center gap-4 pt-4 mb-3 font-tilt-neon">
                 <div onClick={() => changeTag("all")} className={`px-5 rounded-lg border-2 border-solid border-green-400 ${(tag == "all" ? "text-white bg-green-400":"")} hover:text-white hover:bg-green-400 transition duration-300 ease-in-out transform cursor-pointer`}>
                     All
                 </div>

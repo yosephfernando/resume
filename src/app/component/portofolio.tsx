@@ -55,9 +55,9 @@ export default function Portofolio(){
                         {portofolio.map((item, index) => {
                             return (
                                 <SwiperSlide key={index+1}>
-                                    <div className="p-4 flex flex-col items-center bg-slate-400 rounded-2xl">
+                                    <div className="p-4 flex flex-col items-center bg-secondary rounded-2xl">
                                         <Image alt="porto" src={item.screenshot} width={180} height={180} />
-                                        <p className="mt-3">{item.name}</p>
+                                        <p className="mt-3 text-white">{item.name}</p>
                                     </div>
                                 </SwiperSlide>
                             )

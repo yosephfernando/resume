@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const experiences = [
     {
-        "year": "March 2021 - present",
+        "year": "March 2021 - March 2025",
         "desc": "In PT Pusat Inovasi Nusantara, I work as a Web Developer and Data Engineer. My responsibilities include revamping the company’s profile website, maintaining the learning platform using Moodle, and providing training on data engineering topics.",
         "points": [],
         "position": [
@@ -39,37 +39,37 @@ const experiences = [
 
 export default function Experiences(){
     return (
-        <div className="flex font-tilt-neon flex-col px-1 py-3 sm:px-8 sm:py-8 container items-center justify-between">
+        <div className="flex font-tilt-neon flex-col py-3 sm:px-8 sm:py-8 items-center justify-between">
             <p className="text-[30px]">Work Experiences</p>
-            <div className="divide-y-2 divide-slate-300 px-8 sm:px-20 text-justify">
+            <div className="px-8 sm:px-20 text-justify">
                 {experiences.map((item, index) => {
                     return (
-                        <div key={index+1} className="flex flex-wrap gap-4 items-center justify-center py-4">
-                            <p className="text-center md:text-left text-[25px] w-full md:w-1/4">
-                                {item.year}
-                            </p>
-                            <p className="w-full md:w-2/4">
-                                {item.desc}
-                                <br/>
-                                <br/>
-                                {item.points.map((itemPoint, pointIndex) => {
-                                    return (
-                                        <>
-                                            {itemPoint}
-                                            <br />
-                                            <br />
-                                        </>
-                                    )
-                                })}
-                                Positions:
-                                <br/>
-                                <br/>
-                                {item.position.map((pos, indexPos) => {
-                                    return (
-                                        <span key={indexPos+1} className="rounded-full bg-green-300 p-2 mr-2">{pos}</span>
-                                    )
-                                })}
-                            </p>
+                        <div key={index+1} className="flex flex-col gap-4 items-center justify-center py-4">
+                            <div className="exp-content w-full max-w-4xl bg-secondary shadow-md rounded-lg p-6">
+                                <p className="text-[20px] font-bold ">
+                                    {item.year}
+                                </p>
+                                <p className="mt-2">
+                                    {item.desc}
+                                </p>
+                                {item.points.length > 0 && (
+                                    <ul className="list-none list-inside mt-4 ">
+                                        {item.points.map((itemPoint, pointIndex) => (
+                                            <li key={pointIndex}>{itemPoint}</li>
+                                        ))}
+                                    </ul>
+                                )}
+                                <div className="mt-4">
+                                    <p className="font-semibold">Positions:</p>
+                                    <div className="flex flex-wrap gap-2 mt-2">
+                                        {item.position.map((pos, indexPos) => (
+                                            <span key={indexPos+1} className="rounded-full bg-green-300 dark:bg-green-400 px-3 py-1 text-sm text-gray-800">
+                                                {pos}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     )
                 })}
