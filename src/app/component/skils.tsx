@@ -1,74 +1,75 @@
 'use client';
 import Image from "next/image";
 import { useState } from "react";
+import { BASE_PATH } from "@/../next.config";
 
 const skilsData = [
     {
         "name": "NodeJS",
         "tag": "backend",
-        "image": "/nodejs.png"
+        "image": `${BASE_PATH}/nodejs.png`
     },
     {
         "name": "Laravel",
         "tag": "backend",
-        "image": "/laravel.svg"
+        "image": `${BASE_PATH}/laravel.svg`
     },
     {
         "name": "Python",
         "tag": "backend",
-        "image": "/python.svg"
+        "image": `${BASE_PATH}/python.svg`
     },
     {
         "name": "ReactJS",
         "tag": "frontend",
-        "image": "/file-type-reactjs.svg"
+        "image": `${BASE_PATH}/file-type-reactjs.svg`
     },
     {
         "name": "VueJS",
         "tag": "frontend",
-        "image": "/vue-js.svg"
+        "image": `${BASE_PATH}/vue-js.svg`
     },
     {
         "name": "Mysql",
         "tag": "dbms",
-        "image": "/mysql-original-wordmark.svg"
+        "image": `${BASE_PATH}/mysql-original-wordmark.svg`
     },
     {
         "name": "PSQL",
         "tag": "dbms",
-        "image": "/postgresql-plain-wordmark.svg"
+        "image": `${BASE_PATH}/postgresql-plain-wordmark.svg`
     },
     {
         "name": "SQL server",
         "tag": "dbms",
-        "image": "/sql-database-generic.svg"
+        "image": `${BASE_PATH}/sql-database-generic.svg`
     },
     {
         "name": "Docker",
         "tag": "devops",
-        "image": "/docker-original-wordmark.svg"
+        "image": `${BASE_PATH}/docker-original-wordmark.svg`
     },
     {
         "name": "Haproxy",
         "tag": "devops",
-        "image": "/haproxy_logo_icon_171017.png"
+        "image": `${BASE_PATH}/haproxy_logo_icon_171017.png`
     },
     {
         "name": "Cloudflare",
         "tag": "devops",
-        "image": "/cloudflare.svg"
+        "image": `${BASE_PATH}/cloudflare.svg`
     },
     {
         "name": "Kotlin",
         "tag": "mobiledev",
-        "image": "/kotlin-original.svg"
+        "image": `${BASE_PATH}/kotlin-original.svg`
     },
     {
         "name": "Java",
         "tag": "mobiledev",
-        "image": "/java-original.svg"
+        "image": `${BASE_PATH}/java-original.svg`
     }
-]
+];
 
 export default function Skils(){
     const [tag, setTag] = useState("all")

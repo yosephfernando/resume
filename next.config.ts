@@ -1,14 +1,11 @@
 import type { NextConfig } from "next";
 
-const basePath = "/resume";
+export const BASE_PATH = "/resume";
 
 const nextConfig: NextConfig = {
-  basePath,
+  basePath: BASE_PATH,
   output: "export",
   reactStrictMode: true,
-  env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
-  },
   images: {
     unoptimized: true,
   },

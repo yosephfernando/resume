@@ -2,30 +2,30 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
+import { BASE_PATH } from "@/../next.config";
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const portofolio = [
     {
         "name": "Intelegence information system",
-        "screenshot": `${basePath}/laravel.svg`
+        "screenshot": `${BASE_PATH}/laravel.svg`
     },
     {
         "name": "Person Live tracker",
-        "screenshot": `${basePath}/kotlin-original.svg}`
+        "screenshot": `${BASE_PATH}/kotlin-original.svg}`
     },
     {
         "name": "Taks Management Tools",
-        "screenshot": `${basePath}/nodejs.png`
+        "screenshot": `${BASE_PATH}/nodejs.png`
     },
     {
         "name": "Travel e-commerce",
-        "screenshot": `${basePath}/nodejs.png`
+        "screenshot": `${BASE_PATH}/nodejs.png`
     },
     {
         "name": "Company profile web & CMS",
-        "screenshot": `${basePath}/nodejs.png`
+        "screenshot": `${BASE_PATH}/nodejs.png`
     }
 ]
 
