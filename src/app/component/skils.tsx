@@ -1,72 +1,72 @@
 'use client';
 import Image from "next/image";
-import { use, useState } from "react";
+import { useState } from "react";
 
 const skilsData = [
     {
         "name": "NodeJS",
         "tag": "backend",
-        "image": "/resume/nodejs.png"
+        "image": "/nodejs.png"
     },
     {
         "name": "Laravel",
         "tag": "backend",
-        "image": "/resume/laravel.svg"
+        "image": "/laravel.svg"
     },
     {
         "name": "Python",
         "tag": "backend",
-        "image": "/resume/python.svg"
+        "image": "/python.svg"
     },
     {
         "name": "ReactJS",
         "tag": "frontend",
-        "image": "/resume/file-type-reactjs.svg"
+        "image": "/file-type-reactjs.svg"
     },
     {
         "name": "VueJS",
         "tag": "frontend",
-        "image": "/resume/vue-js.svg"
+        "image": "/vue-js.svg"
     },
     {
         "name": "Mysql",
         "tag": "dbms",
-        "image": "/resume/mysql-original-wordmark.svg"
+        "image": "/mysql-original-wordmark.svg"
     },
     {
         "name": "PSQL",
         "tag": "dbms",
-        "image": "/resume/postgresql-plain-wordmark.svg"
+        "image": "/postgresql-plain-wordmark.svg"
     },
     {
         "name": "SQL server",
         "tag": "dbms",
-        "image": "/resume/sql-database-generic.svg"
+        "image": "/sql-database-generic.svg"
     },
     {
         "name": "Docker",
         "tag": "devops",
-        "image": "/resume/docker-original-wordmark.svg"
+        "image": "/docker-original-wordmark.svg"
     },
     {
         "name": "Haproxy",
         "tag": "devops",
-        "image": "/resume/haproxy_logo_icon_171017.png"
+        "image": "/haproxy_logo_icon_171017.png"
     },
     {
         "name": "Cloudflare",
         "tag": "devops",
-        "image": "/resume/cloudflare.svg"
+        "image": "/cloudflare.svg"
     },
     {
         "name": "Kotlin",
         "tag": "mobiledev",
-        "image": "/resume/kotlin-original.svg"
+        "image": "/kotlin-original.svg"
     },
     {
         "name": "Java",
         "tag": "mobiledev",
-        "image": "/resume/java-original.svg"
+        "image": "/java-original.svg"
     }
 ]
 

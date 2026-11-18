@@ -8,23 +8,23 @@ import 'swiper/css/navigation';
 const portofolio = [
     {
         "name": "Intelegence information system",
-        "screenshot": "/resume/laravel.svg"
+        "screenshot": "/laravel.svg"
     },
     {
         "name": "Person Live tracker",
-        "screenshot": "/resume/kotlin-original.svg"
+        "screenshot": "/kotlin-original.svg"
     },
     {
         "name": "Taks Management Tools",
-        "screenshot": "/resume/nodejs.png"
+        "screenshot": "/nodejs.png"
     },
     {
         "name": "Travel e-commerce",
-        "screenshot": "/resume/nodejs.png"
+        "screenshot": "/nodejs.png"
     },
     {
         "name": "Company profile web & CMS",
-        "screenshot": "/resume/nodejs.png"
+        "screenshot": "/nodejs.png"
     }
 ]
 

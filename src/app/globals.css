@@ -1,8 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@theme {
+  /* Custom Font (generates `font-tilt-neon` utility) */
+  --font-tilt-neon: "Tilt Neon", sans-serif;
+
+  /* Custom Animation & Keyframes (generates `animate-fade-in` utility) */
+  --animate-fade-in: fade-in 1s ease-out;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+/* Custom Background Position (`bg-center-4`) */
+@utility bg-center-4 {
+  background-position: center 1rem;
+}
+
+/* Custom Gradients (legacy v3 aliases) */
+@utility bg-gradient-radial {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
+
+@utility bg-gradient-conic {
+  background-image: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
+}
+
+/* Theme Variables (consolidated light & dark mode) */
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -14,20 +44,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
     --primary-color-rgb: 0, 92, 191;
     --secondary-color-rgb: 0, 123, 255;
     --text-color-rgb: 0, 0, 0;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* Base & Custom Component Styles */
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -39,7 +65,6 @@ body {
 }
 
 .bg-primary {
-  /* background-color: rgb(var(--primary-color-rgb)); */
   background: linear-gradient(
     to left,
     rgb(var(--primary-color-rgb)),
@@ -51,15 +76,8 @@ body {
   background-color: rgb(var(--secondary-color-rgb));
 }
 
-.exp-content > div > p, 
+.exp-content > div > p,
 .exp-content > p,
-.exp-content > ul > li
-{
+.exp-content > ul > li {
   color: rgb(var(--text-color-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
