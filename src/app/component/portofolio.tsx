@@ -5,26 +5,27 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const portofolio = [
     {
         "name": "Intelegence information system",
-        "screenshot": "/laravel.svg"
+        "screenshot": `${basePath}/laravel.svg`
     },
     {
         "name": "Person Live tracker",
-        "screenshot": "/kotlin-original.svg"
+        "screenshot": `${basePath}/kotlin-original.svg}`
     },
     {
         "name": "Taks Management Tools",
-        "screenshot": "/nodejs.png"
+        "screenshot": `${basePath}/nodejs.png`
     },
     {
         "name": "Travel e-commerce",
-        "screenshot": "/nodejs.png"
+        "screenshot": `${basePath}/nodejs.png`
     },
     {
         "name": "Company profile web & CMS",
-        "screenshot": "/nodejs.png"
+        "screenshot": `${basePath}/nodejs.png`
     }
 ]
 
