@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // basePath: "/resume",
-  // assetPrefix: "/resume/",
-  // output: "export",
+  basePath: "/resume",
+  assetPrefix: "/resume/",
+  output: "export",
   reactStrictMode: true,
 };
 
