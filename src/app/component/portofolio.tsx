@@ -13,7 +13,7 @@ const portofolio = [
     },
     {
         "name": "Person Live tracker",
-        "screenshot": `${BASE_PATH}/kotlin-original.svg}`
+        "screenshot": `${BASE_PATH}/kotlin-original.svg`
     },
     {
         "name": "Taks Management Tools",
