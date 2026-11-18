@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const geistSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
 
 export const metadata: Metadata = {
-  title: "My CV",
-  description: "Herman Yoseph Fernando",
+  title: "Herman Yoseph Fernando — Full Stack Developer",
+  description: "Portfolio and resume of Herman Yoseph Fernando",
 };
 
 export default function RootLayout({
@@ -15,8 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth focus:scroll-auto">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="bg-canvas text-ink font-sans antialiased selection:bg-olive/15 selection:text-ink">
+        {children}
+      </body>
     </html>
   );
 }

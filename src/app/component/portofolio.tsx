@@ -1,70 +1,67 @@
-'use client';
+"use client";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
-import { BASE_PATH } from "@/../next.config";
-import 'swiper/css';
-import 'swiper/css/navigation';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import { BASE_PATH } from "../../../next.config";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const portofolio = [
-    {
-        "name": "Intelegence information system",
-        "screenshot": `${BASE_PATH}/laravel.svg`
-    },
-    {
-        "name": "Person Live tracker",
-        "screenshot": `${BASE_PATH}/kotlin-original.svg`
-    },
-    {
-        "name": "Taks Management Tools",
-        "screenshot": `${BASE_PATH}/nodejs.png`
-    },
-    {
-        "name": "Travel e-commerce",
-        "screenshot": `${BASE_PATH}/nodejs.png`
-    },
-    {
-        "name": "Company profile web & CMS",
-        "screenshot": `${BASE_PATH}/nodejs.png`
-    }
-]
+  { name: "Intelegence information system", screenshot: `${BASE_PATH}/laravel.svg` },
+  { name: "Person Live tracker", screenshot: `${BASE_PATH}/kotlin-original.svg` },
+  { name: "Taks Management Tools", screenshot: `${BASE_PATH}/nodejs.png` },
+  { name: "Travel e-commerce", screenshot: `${BASE_PATH}/nodejs.png` },
+  { name: "Company profile web & CMS", screenshot: `${BASE_PATH}/nodejs.png` },
+];
 
-export default function Portofolio(){
-    return (
-        <>
-            <div className="flex flex-col p-8 container items-center justify-between">
-                <p className="font-tilt-neon text-[30px]">Portofolio</p>
-            </div>
-            <div className="container px-8 mb-[5em]">
-                <Swiper
-                    modules={[Navigation, Autoplay]}
-                    navigation
-                    breakpoints={{
-                        320: { slidesPerView: 1 },
-                        480: { slidesPerView: 2 },
-                        640: { slidesPerView: 3 }
-                    }}
-                    autoplay={{
-                        delay: 1000,
-                        disableOnInteraction: false,
-                    }}
-                    spaceBetween={30}
-                    slidesPerView={4}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
-                >
-                        {portofolio.map((item, index) => {
-                            return (
-                                <SwiperSlide key={index+1}>
-                                    <div className="p-4 flex flex-col items-center bg-secondary rounded-2xl">
-                                        <Image alt="porto" src={item.screenshot} width={180} height={180} />
-                                        <p className="mt-3 text-white">{item.name}</p>
-                                    </div>
-                                </SwiperSlide>
-                            )
-                        })}
-                </Swiper>
-            </div>
-        </>
-    )
+export default function Portofolio() {
+  return (
+    <section id="portfolio" className="py-20 sm:py-24">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div className="md:col-span-4">
+          <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
+            03 / Portfolio
+          </h2>
+        </div>
+        <div className="md:col-span-8 min-w-0">
+          <Swiper
+            className="portfolio-swiper"
+            modules={[Navigation, Autoplay]}
+            navigation
+            loop
+            spaceBetween={24}
+            slidesPerView={1}
+            breakpoints={{
+              480: { slidesPerView: 2 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          >
+            {portofolio.map((item, index) => (
+              <SwiperSlide key={item.name}>
+                <figure className="group">
+                  <div className="flex aspect-square items-center justify-center rounded-xl border border-hairline bg-surface transition-colors duration-500 ease-out group-hover:border-charcoal/30">
+                    <Image
+                      alt=""
+                      src={item.screenshot}
+                      width={96}
+                      height={96}
+                      className="h-20 w-20 object-contain grayscale opacity-70 transition-all duration-500 ease-out group-hover:grayscale-0 group-hover:opacity-100"
+                    />
+                  </div>
+                  <figcaption className="mt-4 flex items-baseline gap-3">
+                    <span className="font-mono text-xs text-olive">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-sm font-medium text-ink">{item.name}</span>
+                  </figcaption>
+                </figure>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </section>
+  );
 }

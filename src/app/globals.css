@@ -1,83 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 @import "tailwindcss";
 
 @theme {
-  /* Custom Font (generates `font-tilt-neon` utility) */
-  --font-tilt-neon: "Tilt Neon", sans-serif;
+  /* Typography */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
 
-  /* Custom Animation & Keyframes (generates `animate-fade-in` utility) */
-  --animate-fade-in: fade-in 1s ease-out;
+  /* Editorial Palette */
+  --color-canvas: #FAFAF9;
+  --color-surface: #F4F4F2;
+  --color-ink: #18181B;
+  --color-muted: #71717A;
+  --color-hairline: #E4E4E7;
+  --color-olive: #4D5E4A;
+  --color-charcoal: #27272A;
 
-  @keyframes fade-in {
-    0% {
+  /* Subtle Entrance Animation */
+  --animate-fade-up: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  @keyframes fade-up {
+    from {
       opacity: 0;
+      transform: translateY(8px);
     }
-    100% {
+    to {
       opacity: 1;
+      transform: translateY(0);
     }
   }
 }
 
-/* Custom Background Position (`bg-center-4`) */
-@utility bg-center-4 {
-  background-position: center 1rem;
-}
-
-/* Custom Gradients (legacy v3 aliases) */
-@utility bg-gradient-radial {
-  background-image: radial-gradient(var(--tw-gradient-stops));
-}
-
-@utility bg-gradient-conic {
-  background-image: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
-}
-
-/* Theme Variables (consolidated light & dark mode) */
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --primary-color-rgb: 0, 123, 255;
-  --secondary-color-rgb: 0, 92, 191;
-  --text-color-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-    --primary-color-rgb: 0, 92, 191;
-    --secondary-color-rgb: 0, 123, 255;
-    --text-color-rgb: 0, 0, 0;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
   }
 }
 
-/* Base & Custom Component Styles */
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-.bg-primary {
-  background: linear-gradient(
-    to left,
-    rgb(var(--primary-color-rgb)),
-    rgb(var(--secondary-color-rgb))
-  );
-}
-
-.bg-secondary {
-  background-color: rgb(var(--secondary-color-rgb));
-}
-
+/* Updated legacy wrapper for experience descriptions */
 .exp-content > div > p,
 .exp-content > p,
 .exp-content > ul > li {
-  color: rgb(var(--text-color-rgb));
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+/* Swiper navigation, tuned to the editorial palette */
+.portfolio-swiper {
+  --swiper-navigation-color: var(--color-charcoal);
+  --swiper-navigation-size: 18px;
 }
